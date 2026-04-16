@@ -1,0 +1,220 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--spacing-16);
+  background-color: var(--color-background-body);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-block: var(--spacing-32);
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+  }
+}
+
+.container {
+  max-width: var(--max-width-container);
+  margin-inline: auto;
+  padding-inline: var(--spacing-6);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-16);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--color-secondary-light);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--spacing-6);
+}
+
+.title {
+  margin-bottom: var(--spacing-6);
+}
+
+.highlight {
+  color: var(--color-secondary);
+}
+
+.description {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-8);
+  max-width: 500px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  width: 100%;
+  margin-bottom: var(--spacing-12);
+}
+
+@media (min-width: 640px) {
+  .actions {
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  padding-top: var(--spacing-8);
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-main);
+  font-family: var(--font-family-heading);
+}
+
+.statLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.statDivider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-border);
+}
+
+/* Image Visual Box */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageBox {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  border-radius: 40px 140px 40px 40px;
+  box-shadow: var(--shadow-xl);
+}
+
+.abstractBlob {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 150px;
+  height: 150px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(20px);
+}
+
+.cardFloating {
+  position: absolute;
+  top: 15%;
+  left: -10%;
+  background: var(--color-surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  animation: float 6s ease-in-out infinite;
+}
+
+.cardFloatingBottom {
+  top: auto;
+  bottom: 20%;
+  left: auto;
+  right: -10%;
+  padding: var(--spacing-3) var(--spacing-6);
+  animation-delay: 2s;
+  background-color: var(--color-success);
+  color: white;
+}
+
+.cardAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-background-body);
+}
+
+.cardLines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.line {
+  width: 60px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--color-border);
+}
+
+.lineShort {
+  width: 40px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--color-border);
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.verifiedBadge {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}

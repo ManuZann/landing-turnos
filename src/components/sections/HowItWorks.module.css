@@ -1,0 +1,96 @@
+.header {
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: var(--spacing-16);
+}
+
+.title {
+  margin-bottom: var(--spacing-4);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+}
+
+.stepsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .stepsContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-8);
+  }
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  background-color: var(--color-surface);
+  padding: var(--spacing-8) var(--spacing-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-normal);
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.stepNumber {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-bottom: var(--spacing-6);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 8px var(--color-surface);
+}
+
+.stepTitle {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-3);
+  color: var(--color-text-main);
+}
+
+.stepDescription {
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.connectingLine {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .connectingLine {
+    display: block;
+    position: absolute;
+    top: 64px; /* align with center of step number */
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background-color: var(--color-border);
+    background-image: linear-gradient(to right, var(--color-primary) 50%, transparent 50%);
+    background-size: 20px 100%;
+    z-index: 0;
+  }
+}

@@ -1,0 +1,154 @@
+.footer {
+  background-color: var(--color-background-body);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-16);
+  padding-bottom: var(--spacing-8);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin-inline: auto;
+  padding-inline: var(--spacing-6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  margin-bottom: var(--spacing-12);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--spacing-8);
+  }
+}
+
+.brandCol {
+  max-width: 400px;
+}
+
+.logo {
+  display: inline-flex;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-4);
+}
+
+.logoAccent {
+  color: var(--color-primary);
+}
+
+.description {
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-6);
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.socialLinks a:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.columnTitle {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-6);
+  color: var(--color-text-main);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.linkList a {
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.linkList a:hover {
+  color: var(--color-primary);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.contactList li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  color: var(--color-text-muted);
+}
+
+.contactList svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.bottomBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding-top: var(--spacing-8);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.legalLinks {
+  display: flex;
+  gap: var(--spacing-6);
+}
+
+.legalLinks a {
+  color: var(--color-text-muted);
+}
+
+.legalLinks a:hover {
+  color: var(--color-primary);
+}
